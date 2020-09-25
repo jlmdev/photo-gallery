@@ -3,6 +3,7 @@ import { Link, Route, Switch } from 'react-router-dom'
 import { Pandas } from './Pandas'
 import { Miniatures } from './Miniatures'
 import { PandaPhotoDetail } from './PandaPhotoDetail'
+import { MiniaturePhotoDetail } from './MiniaturePhotoDetail'
 
 export class CategoryList extends Component {
   render() {
@@ -29,9 +30,8 @@ export class CategoryList extends Component {
             <Route exact path="/"></Route>
             <Route exact path="/pandas" component={Pandas} />
             <Route path="/pandas/:index" component={PandaPhotoDetail} />
-            <Route exact path="/miniatures">
-              <Miniatures />
-            </Route>
+            <Route exact path="/miniatures" component={Miniatures} />
+            <Route path="/miniatures/:index" component={MiniaturePhotoDetail} />
             <Route path="*">Not Found</Route>
           </Switch>
         </>

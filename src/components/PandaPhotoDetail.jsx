@@ -9,12 +9,17 @@ export class PandaPhotoDetail extends Component {
   render() {
     console.log(this.props)
     const photoIndex = this.props.match.params.index
-    const photoSource = this.state.photos[photoIndex].imageURL
+    const photoImage = this.state.photos[photoIndex].imageURL
+    const photoTitle = this.state.photos[photoIndex].title
+    const photoSource = this.state.photos[photoIndex].sourceURL
 
     return (
       <div>
         <figure>
-          <img src={photoSource} alt={this.props.alt} />
+          <img src={photoImage} alt={this.props.alt} />
+          <figcaption>
+            <a href={photoSource}>{photoTitle}</a>
+          </figcaption>
         </figure>
       </div>
     )
