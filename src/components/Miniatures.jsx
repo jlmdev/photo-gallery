@@ -3,8 +3,8 @@ import Gallery from './gallery.json'
 
 export class Miniatures extends Component {
   state = {
-    miniatures: Gallery.miniatures,
-    photos: Gallery.miniatures.photos,
+    miniatures: Gallery.categories.miniatures,
+    photos: Gallery.categories.miniatures.photos,
   }
 
   render() {

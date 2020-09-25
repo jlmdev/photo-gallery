@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import { Link, Route, Switch } from 'react-router-dom'
 import Gallery from './gallery.json'
+import { PhotoDetail } from './PhotoDetail'
 
 export class Pandas extends Component {
   state = {
-    pandas: Gallery.pandas,
-    photos: Gallery.pandas.photos,
+    pandas: Gallery.categories.pandas,
+    photos: Gallery.categories.pandas.photos,
   }
 
   render() {
@@ -12,9 +14,11 @@ export class Pandas extends Component {
       <div>
         <h1>{this.state.pandas.title}</h1>
         <p>{this.state.pandas.description}</p>
-        {this.state.photos.map(photo => (
+        {this.state.photos.map((photo, index) => (
           <figure>
-            <img src={photo.imageURL} alt={photo.title} />
+            <Link to="/photo-detail">
+              <img src={photo.imageURL} alt={photo.title} />
+            </Link>
             <figcaption>
               {photo.title}
               <a href={photo.sourceURL}>Source</a>
