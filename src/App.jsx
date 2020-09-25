@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
+import { Pandas } from './components/Pandas'
+import { Miniatures } from './components/Miniatures'
 
 class App extends Component {
   render() {
@@ -22,14 +24,12 @@ class App extends Component {
           </nav>
         </header>
         <Switch>
-          <Route exact path="/">
-            Home
-          </Route>
+          <Route exact path="/"></Route>
           <Route exact path="/1">
-            Page 1
+            <Pandas />
           </Route>
           <Route exact path="/2">
-            Page 2
+            <Miniatures />
           </Route>
           <Route path="*">Not Found</Route>
         </Switch>
