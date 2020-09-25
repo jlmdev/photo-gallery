@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import { Pandas } from './Pandas'
 import { Miniatures } from './Miniatures'
+import { PandaPhotoDetail } from './PandaPhotoDetail'
 
 export class CategoryList extends Component {
   render() {
@@ -27,6 +28,7 @@ export class CategoryList extends Component {
           <Switch>
             <Route exact path="/"></Route>
             <Route exact path="/pandas" component={Pandas} />
+            <Route path="/pandas/:index" component={PandaPhotoDetail} />
             <Route exact path="/miniatures">
               <Miniatures />
             </Route>

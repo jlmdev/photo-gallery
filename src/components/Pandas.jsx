@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import Gallery from './gallery.json'
-import { PhotoDetail } from './PhotoDetail'
+import { PandaPhotoDetail } from './PandaPhotoDetail'
 
 export class Pandas extends Component {
   state = {
@@ -10,13 +10,15 @@ export class Pandas extends Component {
   }
 
   render() {
+    console.log(this.props)
+
     return (
       <div>
         <h1>{this.state.pandas.title}</h1>
         <p>{this.state.pandas.description}</p>
         {this.state.photos.map((photo, index) => (
           <figure>
-            <Link to="/photo-detail">
+            <Link to={`/pandas/${index}`}>
               <img src={photo.imageURL} alt={photo.title} />
             </Link>
             <figcaption>
