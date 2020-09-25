@@ -12,7 +12,7 @@ export class Pandas extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.pandas.title}</h1>
+        <h2>{this.state.pandas.title}</h2>
         <p>{this.state.pandas.description}</p>
         {this.state.photos.map((photo, index) => (
           <figure>
