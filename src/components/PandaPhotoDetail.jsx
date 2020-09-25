@@ -16,7 +16,7 @@ export class PandaPhotoDetail extends Component {
     return (
       <div>
         <figure>
-          <img src={photoImage} alt={this.props.alt} />
+          <img src={photoImage} alt={photoTitle} />
           <figcaption>
             <a href={photoSource}>{photoTitle}</a>
           </figcaption>
