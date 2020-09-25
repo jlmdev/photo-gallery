@@ -25,9 +25,7 @@ class App extends Component {
         </header>
         <Switch>
           <Route exact path="/"></Route>
-          <Route exact path="/1">
-            <Pandas />
-          </Route>
+          <Route exact path="/1" component={Pandas} />
           <Route exact path="/2">
             <Miniatures />
           </Route>
