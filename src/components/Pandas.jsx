@@ -11,7 +11,7 @@ export class Pandas extends Component {
 
   render() {
     return (
-      <div class="photo-entry">
+      <div className="photo-entry">
         <h2>{this.state.pandas.title}</h2>
         <p>{this.state.pandas.description}</p>
         <section className="photo-list">
