@@ -11,20 +11,22 @@ export class Miniatures extends Component {
 
   render() {
     return (
-      <div>
-        <h1>{this.state.miniatures.title}</h1>
+      <div className="photo-entry">
+        <h2>{this.state.miniatures.title}</h2>
         <p>{this.state.miniatures.description}</p>
-        {this.state.photos.map((photo, index) => (
-          <figure>
-            <Link to={`/miniatures/${index}`}>
-              <img src={photo.imageURL} alt={photo.title} />
-            </Link>
-            <figcaption>
-              {photo.title}
-              <a href={photo.sourceURL}>Source</a>
-            </figcaption>
-          </figure>
-        ))}
+        <section className="photo-list">
+          {this.state.photos.map((photo, index) => (
+            <figure>
+              <Link to={`/miniatures/${index}`} className="image-link">
+                <img src={photo.imageURL} alt={photo.title} />
+              </Link>
+              <figcaption>
+                {photo.title}
+                <a href={photo.sourceURL}>Source</a>
+              </figcaption>
+            </figure>
+          ))}
+        </section>
       </div>
     )
   }
