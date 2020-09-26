@@ -14,8 +14,8 @@ export class MiniaturePhotoDetail extends Component {
     const photoSource = this.state.photos[photoIndex].sourceURL
 
     return (
-      <div>
-        <figure>
+      <div className="photo-detail-container">
+        <figure className="photo-detail">
           <img src={photoImage} alt={photoTitle} />
           <figcaption>
             <a href={photoSource}>{photoTitle}</a>
