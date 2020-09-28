@@ -3,7 +3,7 @@ import { Link, Route, Switch } from 'react-router-dom'
 import Gallery from '../components/gallery.json'
 import { PandaPhotoDetail } from '../components/PandaPhotoDetail'
 
-export class Pandas extends Component {
+export class PhotoList extends Component {
   state = {
     pandas: Gallery.pandas,
     photos: Gallery.pandas.photos,

@@ -3,7 +3,7 @@ import Gallery from './gallery.json'
 
 export class PandaPhotoDetail extends Component {
   state = {
-    photos: Gallery.categories.pandas.photos,
+    photos: Gallery.pandas.photos,
   }
 
   render() {
