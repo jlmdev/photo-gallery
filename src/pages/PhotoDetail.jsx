@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Gallery from './gallery.json'
+import Gallery from '../components/gallery.json'
 
-export class MiniaturePhotoDetail extends Component {
+export class PandaPhotoDetail extends Component {
   state = {
-    photos: Gallery.miniatures.photos,
+    photos: Gallery.pandas.photos,
   }
 
   render() {

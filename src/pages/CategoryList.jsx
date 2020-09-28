@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
-import { Pandas } from './Pandas'
-import { Miniatures } from './Miniatures'
-import { PandaPhotoDetail } from './PandaPhotoDetail'
-import { MiniaturePhotoDetail } from './MiniaturePhotoDetail'
+import { Pandas } from '../components/Pandas'
+import { Miniatures } from '../components/Miniatures'
+import { PandaPhotoDetail } from '../components/PandaPhotoDetail'
+import { MiniaturePhotoDetail } from '../components/MiniaturePhotoDetail'
 
 export class CategoryList extends Component {
   render() {

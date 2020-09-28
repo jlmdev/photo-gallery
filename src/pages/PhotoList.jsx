@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
-import Gallery from './gallery.json'
-import { PandaPhotoDetail } from './PandaPhotoDetail'
+import Gallery from '../components/gallery.json'
+import { PandaPhotoDetail } from '../components/PandaPhotoDetail'
 
 export class Pandas extends Component {
   state = {

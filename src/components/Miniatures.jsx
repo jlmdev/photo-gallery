@@ -5,8 +5,8 @@ import { MiniaturePhotoDetail } from './MiniaturePhotoDetail'
 
 export class Miniatures extends Component {
   state = {
-    miniatures: Gallery.categories.miniatures,
-    photos: Gallery.categories.miniatures.photos,
+    miniatures: Gallery.miniatures,
+    photos: Gallery.miniatures.photos,
   }
 
   render() {
