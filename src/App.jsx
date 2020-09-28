@@ -11,7 +11,7 @@ class App extends Component {
         <body className="hero-image">
           <header>
             <h1>A few of my favorite things...</h1>
-            <nav>
+            {/* <nav>
               <ul>
                 <li>
                   <Link to="/">Go Home</Link>
@@ -23,11 +23,11 @@ class App extends Component {
                   <Link to="/miniatures">Miniatures</Link>
                 </li>
               </ul>
-            </nav>
+            </nav> */}
           </header>
           <Switch>
             <Route exact path="/" component={CategoryList} />
-            <Route exact path="/pandas" component={PhotoList} />
+            <Route exact path="/:category" component={PhotoList} />
           </Switch>
         </body>
       </>

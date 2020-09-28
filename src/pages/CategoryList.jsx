@@ -10,14 +10,14 @@ export class CategoryList extends Component {
     return (
       <div>
         <>
-          <Switch>
+          {/* <Switch>
             <Route exact path="/"></Route>
             <Route exact path="/pandas" component={Pandas} />
             <Route path="/pandas/:index" component={PandaPhotoDetail} />
             <Route exact path="/miniatures" component={Miniatures} />
             <Route path="/miniatures/:index" component={MiniaturePhotoDetail} />
             <Route path="*">Not Found</Route>
-          </Switch>
+          </Switch> */}
           <p></p>
         </>
       </div>
