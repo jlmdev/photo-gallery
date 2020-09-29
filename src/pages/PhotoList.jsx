@@ -1,14 +1,8 @@
 import React, { Component } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import Gallery from '../components/gallery.json'
-// import { PandaPhotoDetail } from '../components/PandaPhotoDetail'
 
 export class PhotoList extends Component {
-  // state = {
-  //   pandas: Gallery.pandas,
-  //   photos: Gallery.pandas.photos,
-  // }
-
   render() {
     const category = this.props.match.params.category
     const PhotoCategory = Gallery[category]

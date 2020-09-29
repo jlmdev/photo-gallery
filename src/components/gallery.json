@@ -1,8 +1,6 @@
 {
   "pandas": {
     "title": "Panda Bears",
-    "imageURL": "https://things-i-like.netlify.com/images/baby_panda.jpg",
-    "sourceURL": "https://codeburst.io/pandas-for-data-stuff-code-challenge-7972207a8294",
     "description": "Pandas are bears native to south-central China, and are objectively the cutest animals on earth.",
     "photos": [
       {
