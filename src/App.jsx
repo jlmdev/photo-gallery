@@ -3,6 +3,7 @@ import { Link, Route, Switch } from 'react-router-dom'
 import Gallery from './components/gallery.json'
 import { CategoryList } from './pages/CategoryList'
 import { PhotoList } from './pages/PhotoList'
+import { PhotoDetail } from './pages/PhotoDetail'
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
         <body className="hero-image">
           <header>
             <h1>A few of my favorite things...</h1>
-            {/* <nav>
+            <nav>
               <ul>
                 <li>
                   <Link to="/">Go Home</Link>
@@ -23,11 +24,12 @@ class App extends Component {
                   <Link to="/miniatures">Miniatures</Link>
                 </li>
               </ul>
-            </nav> */}
+            </nav>
           </header>
           <Switch>
             <Route exact path="/" component={CategoryList} />
             <Route exact path="/:category" component={PhotoList} />
+            <Route exact path="/:category/:index" component={PhotoDetail} />
           </Switch>
         </body>
       </>

@@ -1,24 +1,25 @@
 import React, { Component } from 'react'
 import Gallery from '../components/gallery.json'
 
-export class PandaPhotoDetail extends Component {
-  state = {
-    photos: Gallery.pandas.photos,
-  }
+export class PhotoDetail extends Component {
+  // state = {
+  //   photos: Gallery.pandas.photos,
+  // }
 
   render() {
-    console.log(this.props)
+    const category = this.props.match.params.category
     const photoIndex = this.props.match.params.index
-    const photoImage = this.state.photos[photoIndex].imageURL
-    const photoTitle = this.state.photos[photoIndex].title
-    const photoSource = this.state.photos[photoIndex].sourceURL
+    const photoImage = photoIndex.imageURL
+    const photoTitle = photoIndex.title
+    const photoSource = photoIndex.sourceURL
+    const photo = Gallery[category].photos[photoIndex]
 
     return (
       <div className="photo-detail-container">
         <figure className="photo-detail">
-          <img src={photoImage} alt={photoTitle} />
+          <img src={photo.imageURL} alt={photo.title} />
           <figcaption>
-            <a href={photoSource}>{photoTitle}</a>
+            <a href={photo.sourceURL}>{photo.title}</a>
           </figcaption>
         </figure>
       </div>
